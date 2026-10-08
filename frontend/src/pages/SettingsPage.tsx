@@ -2,7 +2,7 @@ import React from 'react';
 import { Sliders, KeyRound, Globe, ShieldAlert } from 'lucide-react';
 
 export const SettingsPage: React.FC = () => {
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+  const apiBaseUrl = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
   const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'Not configured in frontend';
 
   return (

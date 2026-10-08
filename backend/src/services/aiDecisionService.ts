@@ -52,7 +52,7 @@ export class AIDecisionService {
   ): Promise<{ analysis: AIAnalysisResult; requestId: string }> {
     const gemini = getGeminiClient();
     if (!gemini) {
-      throw new Error('Google Gemini API client is not configured. Please set GEMINI_API_KEY in backend/.env');
+      throw new Error('Google Gemini API client is not configured. Please set GEMINI_API_KEY environment variable.');
     }
 
     // Load active rules from database
@@ -264,7 +264,7 @@ USER REQUEST TO EVALUATE:
     const { GeneratedWorkflowSchema } = await import('../validators/aiValidator.js');
     const gemini = getGeminiClient();
     if (!gemini) {
-      throw new Error('Google Gemini API client is not configured. Please set GEMINI_API_KEY in backend/.env');
+      throw new Error('Google Gemini API client is not configured. Please set GEMINI_API_KEY environment variable.');
     }
 
     const model = gemini.getGenerativeModel({

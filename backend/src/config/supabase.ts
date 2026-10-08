@@ -12,7 +12,7 @@ let supabaseServerClient: SupabaseClient | null = null;
 export const getSupabaseClient = (): SupabaseClient => {
   if (!supabaseUrl || !supabaseServiceKey || supabaseUrl.includes('your-project')) {
     throw new Error(
-      'Supabase credentials are not configured. Please set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in backend/.env'
+      'Supabase credentials are not configured. Please set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables.'
     );
   }
 
