@@ -81,7 +81,7 @@ export const CreateRequest: React.FC = () => {
       }
     } catch (err: unknown) {
       console.error('AI Analysis failed:', err);
-      setApiError('Gemini decision analysis failed. Check that GEMINI_API_KEY is configured in backend/.env.');
+      setApiError('Gemini decision analysis failed. Check that GEMINI_API_KEY is configured in backend environment variables.');
     } finally {
       setAiAnalyzing(false);
     }
